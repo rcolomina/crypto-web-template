@@ -1,0 +1,12 @@
+{% extends "src/templates/default.html" %}
+
+{% block title %}{{ super() }}Home{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="index.css" />
+{% endblock %}
+
+{% block body %}
+  {% include "src/layouts/topbar/topbar.html" %}
+  <script src="index.js"></script>
+{% endblock %}
