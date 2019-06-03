@@ -24,7 +24,7 @@ const SRC = "src";
 const DIST = "dist";
 
 function processMarkup() {
-  return src(join(SRC, "pages", "*", "*.html"))
+  return src(join(SRC, "*.html"))
     .pipe(nunjucks.compile())
     .pipe(gulpIf(IS_PROD, htmlmin({ collapseWhitespace: true })))
     .pipe(flatten())
@@ -33,7 +33,7 @@ function processMarkup() {
 }
 
 function processStyles() {
-  return src(join(SRC, "pages", "*", "*.scss"))
+  return src(join(SRC, "*.scss"))
     .pipe(
       sass({ includePaths: [SRC, "node_modules"] }).on("error", sass.logError)
     )

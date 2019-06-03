@@ -14,7 +14,7 @@ module.exports = {
     alias: { "@": SRC }
   },
   entry: {
-    index: resolve(SRC, "pages", "index", "index.js")
+    index: resolve(SRC, "index.js")
   },
   output: {
     path: DIST
