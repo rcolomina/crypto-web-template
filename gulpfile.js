@@ -18,7 +18,7 @@ const browserSync = require("browser-sync").create();
 
 const [DEV, PROD] = ["development", "production"];
 const { NODE_ENV = DEV } = process.env;
-const IS_PROD = NODE_ENV === PROD;
+const [IS_DEV, IS_PROD] = [NODE_ENV === DEV, NODE_ENV === PROD];
 
 const SRC = "src";
 const DIST = "dist";
@@ -29,7 +29,7 @@ function processMarkup() {
     .pipe(gulpIf(IS_PROD, htmlmin({ collapseWhitespace: true })))
     .pipe(flatten())
     .pipe(dest(DIST))
-    .pipe(browserSync.stream());
+    .pipe(gulpIf(IS_DEV, browserSync.stream()));
 }
 
 function processStyles() {
@@ -40,10 +40,10 @@ function processStyles() {
     .pipe(postcss())
     .pipe(flatten())
     .pipe(dest(DIST))
-    .pipe(browserSync.stream());
+    .pipe(gulpIf(IS_DEV, browserSync.stream()));
 }
 
-function startBrowserSync() {
+function serveFiles() {
   browserSync.init({
     server: {
       baseDir: DIST
@@ -53,11 +53,9 @@ function startBrowserSync() {
     online: false,
     ui: false
   });
-}
 
-function watchFiles() {
-  watch(join(SRC, "**", "*.html"), processMarkup);
-  watch(join(SRC, "**", "*.scss"), processStyles);
+  watch(SRC + "/**/*.html", processMarkup);
+  watch(SRC + "/**/*.scss", processStyles);
 }
 
 function cleanUp(cb) {
@@ -65,15 +63,13 @@ function cleanUp(cb) {
   cb();
 }
 
-switch (NODE_ENV) {
-  case DEV:
-    exports.default = series(
-      cleanUp,
-      parallel(watchFiles, startBrowserSync, processMarkup, processStyles)
-    );
-    break;
+if (IS_DEV) {
+  exports.default = series(
+    cleanUp,
+    parallel(serveFiles, processMarkup, processStyles)
+  );
+}
 
-  case PROD:
-    exports.default = series(cleanUp, parallel(processMarkup, processStyles));
-    break;
+if (IS_PROD) {
+  exports.default = series(cleanUp, parallel(processMarkup, processStyles));
 }
