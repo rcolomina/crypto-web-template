@@ -10,6 +10,9 @@ const DIST = resolve(__dirname, "dist");
 module.exports = {
   mode: NODE_ENV,
   watch: IS_DEV,
+  resolve: {
+    alias: { "@": SRC }
+  },
   entry: {
     index: resolve(SRC, "pages", "index", "index.js")
   },
