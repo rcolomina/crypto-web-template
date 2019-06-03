@@ -1,0 +1,14 @@
+@import "src/components/nav-menu/nav-menu";
+@import "src/components/logo/logo";
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 25px 25px 0;
+
+  @include mq($from: desktop) {
+    padding: 50px 25px 0;
+  }
+}
