@@ -63,13 +63,30 @@ function cleanUp(cb) {
   cb();
 }
 
+function processVendor() {
+  return src("node_modules/normalize.css/normalize.css")
+    .pipe(postcss())
+    .pipe(flatten())
+    .pipe(dest(join(DIST, "vendor")));
+}
+
+function processAssets() {
+  return src(join(SRC, "assets", "**", "*.*"), {
+    base: join(SRC, "assets")
+  }).pipe(dest(join(DIST, "assets")));
+}
+
+const coreAsyncTasks = [
+  processMarkup,
+  processStyles,
+  processVendor,
+  processAssets
+];
+
 if (IS_DEV) {
-  exports.default = series(
-    cleanUp,
-    parallel(serveFiles, processMarkup, processStyles)
-  );
+  exports.default = series(cleanUp, parallel(serveFiles, ...coreAsyncTasks));
 }
 
 if (IS_PROD) {
-  exports.default = series(cleanUp, parallel(processMarkup, processStyles));
+  exports.default = series(cleanUp, parallel(...coreAsyncTasks));
 }
