@@ -4,24 +4,7 @@
 }
 
 .explain-screen__header {
-  font-weight: 300;
-  font-size: 24px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #000;
-  margin-bottom: 50px;
-
-  & > span {
-    color: transparent;
-    font-weight: 600;
-    background-clip: text;
-    background-image: linear-gradient(to right, #6837b9, #321a68);
-  }
-
-  @include mq($from: desktop) {
-    margin-bottom: 100px;
-    font-size: 48px;
-  }
+  @extend %screen-header;
 }
 
 .explain-screen__blocks {
@@ -69,6 +52,6 @@
   color: #9f9f9f;
 
   @include mq($from: desktop) {
-    font-size: 24px;
+    font-size: 21px;
   }
 }
