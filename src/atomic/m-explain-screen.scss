@@ -18,10 +18,14 @@
 
 .explain-screen__block {
   font-weight: 400;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @include mq($from: tablet) {
+    margin-bottom: 50px;
   }
 
   @include mq($from: desktop) {
