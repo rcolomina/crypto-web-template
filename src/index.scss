@@ -13,14 +13,16 @@
 @import "styles/base";
 
 // Atoms
+@import "atomic/a-screen-header";
 @import "atomic/a-logo";
 @import "atomic/a-nav-menu";
 @import "atomic/a-intro-screen";
-@import "atomic/a-explain-screen";
 @import "atomic/a-brands-screen";
 
 // Molecules
 @import "atomic/m-top-bar";
+@import "atomic/m-explain-screen";
+@import "atomic/m-features-screen";
 
 // Organisms
 @import "atomic/o-welcome-screen";
