@@ -64,10 +64,12 @@ function cleanUp(cb) {
 }
 
 function processVendor() {
-  return src("node_modules/normalize.css/normalize.css")
+  let stream = src("node_modules/normalize.css/normalize.css")
     .pipe(postcss())
     .pipe(flatten())
     .pipe(dest(join(DIST, "vendor")));
+
+  return stream;
 }
 
 function processAssets() {
