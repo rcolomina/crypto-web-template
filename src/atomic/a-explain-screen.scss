@@ -1,0 +1,74 @@
+.explain-screen {
+  padding: 5vw;
+  background-color: #fff;
+}
+
+.explain-screen__header {
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 50px;
+
+  & > span {
+    color: transparent;
+    font-weight: 600;
+    background-clip: text;
+    background-image: linear-gradient(to right, #6837b9, #321a68);
+  }
+
+  @include mq($from: desktop) {
+    margin-bottom: 100px;
+    font-size: 48px;
+  }
+}
+
+.explain-screen__blocks {
+  display: flex;
+  flex-flow: column;
+
+  @include mq($from: desktop) {
+    flex-flow: row;
+  }
+}
+
+.explain-screen__block {
+  font-weight: 400;
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mq($from: desktop) {
+    flex-flow: row;
+    margin-bottom: auto;
+    margin-left: 25px;
+    font-weight: 300;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.explain-screen__block-title {
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: #784cc6;
+
+  @include mq($from: desktop) {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+}
+
+.explain-screen__block-text {
+  color: #9f9f9f;
+
+  @include mq($from: desktop) {
+    font-size: 24px;
+  }
+}
