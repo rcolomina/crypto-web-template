@@ -1,0 +1,72 @@
+%part-of-input {
+  border-radius: 100vw;
+  border: none;
+  padding: 10px 25px;
+
+  @include mq($from: tablet) {
+    padding: 15px 30px;
+  }
+}
+
+.stay-tuned-screen {
+  padding: 5vw;
+  background-image: url("assets/images/stay-tuned-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.stay-tuned-screen__header {
+  @extend %screen-header;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.stay-tuned-screen__subheader {
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+
+  @include mq($from: tablet) {
+    font-size: 18px;
+  }
+
+  @include mq($from: desktop) {
+    font-size: 24px;
+  }
+}
+
+.stay-tuned-screen__form {
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+
+  @include mq($from: tablet) {
+    margin-top: 45px;
+  }
+}
+
+.stay-tuned-screen__input-wrapper {
+  position: relative;
+}
+
+.stay-tuned-screen__input {
+  @extend %part-of-input;
+}
+
+.stay-tuned-screen__input:placeholder-shown {
+  color: #c3c2c2;
+}
+
+.stay-tuned-screen__button {
+  @extend %part-of-input;
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: -1px 0 5px rgba(#000, 0.1);
+  background: linear-gradient(to right, #31c888, #39d7a1);
+}
