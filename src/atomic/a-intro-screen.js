@@ -1,3 +1,3 @@
 import Plyr from "plyr";
 
-new Plyr(document.getElementById("intro-screen"));
+new Plyr(document.getElementById("intro-screen__video"));
