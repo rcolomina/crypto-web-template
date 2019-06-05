@@ -125,7 +125,7 @@
 }
 
 .welcome__transfer-button {
-  padding: 1.25vw 1.5vw;
+  padding: 1vw 1.25vw;
   border-radius: 100vw;
   background-color: transparent;
   margin-left: 3vw;
@@ -135,7 +135,6 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  max-height: 50px;
 
   &:first-child {
     margin-left: 0;
