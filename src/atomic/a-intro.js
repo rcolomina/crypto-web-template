@@ -32,4 +32,4 @@ function onDomContentLoaded() {
   document.addEventListener("scroll", onScroll);
 }
 
-document.addEventListener("DOMContentLoaded", onDomContentLoaded);
+// document.addEventListener("DOMContentLoaded", onDomContentLoaded);
