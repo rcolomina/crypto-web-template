@@ -1,4 +1,4 @@
-import "core-js";
+// import "core-js";
 
 // Atoms
 import "@/atomic/a-nav-menu";
