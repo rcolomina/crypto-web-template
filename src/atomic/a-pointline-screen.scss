@@ -1,0 +1,229 @@
+.pointline-screen {
+  padding: 5vw;
+  background-image: url("assets/images/features-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.pointline-screen__line {
+  position: relative;
+  width: 11px;
+  height: 700px;
+  background-color: #fff;
+  margin: 0 auto;
+
+  @include mq($until: desktop) {
+    margin: auto;
+    margin-right: 2.5%;
+  }
+}
+
+$circle-size: 22;
+
+%pointline-screen__line-circle {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: ($circle-size * 1px);
+  height: ($circle-size * 1px);
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.pointline-screen__line-circle {
+  @extend %pointline-screen__line-circle;
+}
+
+.pointline-screen__line-circle_first {
+  top: 0;
+}
+
+.pointline-screen__line-circle_last {
+  bottom: (-$circle-size * 1px);
+}
+
+.pointline-screen__line-circle-border {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: ($circle-size * 1.6 * 1px);
+  height: ($circle-size * 1.6 * 1px);
+  background-color: rgba(#fff, 0.15);
+  border-radius: 50%;
+  z-index: 1;
+  top: 50%;
+}
+
+@mixin pointline-screen__line-point-position($top-offset) {
+  left: 50%;
+  top: $top-offset;
+  transform: translate(-50%, -$top-offset);
+}
+
+.pointline-screen__line-point {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #a338e8, #491e99);
+
+  text-align: center;
+
+  @include mq($until: tablet) {
+    width: 50px;
+    height: 50px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    border: 3px solid #fff;
+    border-radius: 50%;
+
+    @include mq($until: tablet) {
+      border: 2px solid #fff;
+    }
+  }
+}
+
+.pointline-screen__line-point_first {
+  @include pointline-screen__line-point-position(10%);
+}
+
+.pointline-screen__line-point_second {
+  @include pointline-screen__line-point-position(36%);
+}
+
+.pointline-screen__line-point_third {
+  @include pointline-screen__line-point-position(64%);
+}
+
+.pointline-screen__line-point_fourth {
+  @include pointline-screen__line-point-position(90%);
+}
+
+.pointline-screen__line-point-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #e7a455;
+  font-size: 26px;
+  font-weight: 600;
+
+  @include mq($until: tablet) {
+    font-size: 18px;
+  }
+}
+
+@mixin right-side {
+  left: calc(100% + 50px);
+  text-align: left;
+}
+
+@mixin left-side {
+  right: calc(100% + 50px);
+  text-align: right;
+
+  @include mq($until: tablet) {
+    right: calc(100% + 7.5px);
+  }
+}
+
+.pointline-screen__line-point-title {
+  position: absolute;
+  width: 500%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 600;
+  font-size: 21px;
+  color: #e7a455;
+
+  @include mq($until: desktop) {
+    font-size: 16px;
+  }
+
+  @include mq($until: tablet) {
+    top: -60%;
+  }
+
+  @include mq($from: tablet, $until: desktop) {
+    top: -25%;
+  }
+
+  .pointline-screen__line-point_first & {
+    @include mq($from: desktop) {
+      @include right-side;
+    }
+
+    @include mq($until: desktop) {
+      @include left-side;
+    }
+  }
+
+  .pointline-screen__line-point_second & {
+    @include left-side;
+  }
+
+  .pointline-screen__line-point_third & {
+    @include mq($from: desktop) {
+      @include right-side;
+    }
+
+    @include mq($until: desktop) {
+      @include left-side;
+    }
+  }
+
+  .pointline-screen__line-point_fourth & {
+    @include left-side;
+  }
+}
+
+.pointline-screen__line-point-description {
+  position: absolute;
+  width: 500%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-weight: 300;
+  font-size: 16px;
+
+  @include mq($until: tablet) {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .pointline-screen__line-point_first & {
+    @include left-side;
+  }
+
+  .pointline-screen__line-point_second & {
+    @include mq($from: desktop) {
+      @include right-side;
+    }
+
+    @include mq($until: desktop) {
+      @include left-side;
+    }
+  }
+
+  .pointline-screen__line-point_third & {
+    @include left-side;
+  }
+
+  .pointline-screen__line-point_fourth & {
+    @include mq($from: desktop) {
+      @include right-side;
+    }
+
+    @include mq($until: desktop) {
+      @include left-side;
+    }
+  }
+}
