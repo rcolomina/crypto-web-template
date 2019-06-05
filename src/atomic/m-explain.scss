@@ -17,7 +17,7 @@
 }
 
 .explain__block {
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 35px;
 
   &:last-child {
@@ -32,7 +32,6 @@
     flex-flow: row;
     margin-bottom: auto;
     margin-left: 25px;
-    font-weight: 300;
 
     &:first-child {
       margin-left: 0;
@@ -46,14 +45,22 @@
   text-transform: uppercase;
   color: #784cc6;
 
+  @include mq($from: tablet) {
+    font-size: 24px;
+  }
+
   @include mq($from: desktop) {
     font-size: 32px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 }
 
 .explain__block-text {
   color: #9f9f9f;
+
+  @include mq($from: tablet) {
+    font-size: 18px;
+  }
 
   @include mq($from: desktop) {
     font-size: 21px;

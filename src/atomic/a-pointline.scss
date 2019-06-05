@@ -12,9 +12,14 @@
   background-color: #fff;
   margin: 0 auto;
 
-  @include mq($until: desktop) {
+  @include mq($until: tablet) {
     margin: auto;
-    margin-right: 2.5%;
+    margin-right: 0;
+    width: 9px;
+  }
+
+  @include mq($from: tablet, $until: desktop) {
+    margin-right: 5%;
   }
 }
 
@@ -144,12 +149,9 @@ $circle-size: 22;
   font-size: 21px;
   color: #e7a455;
 
-  @include mq($until: desktop) {
-    font-size: 16px;
-  }
-
   @include mq($until: tablet) {
     top: -60%;
+    font-size: 16px;
   }
 
   @include mq($from: tablet, $until: desktop) {

@@ -175,6 +175,10 @@
   font-size: 2.5vw;
   padding: 0 25%;
   color: hsl(0, 0%, 31%);
+
+  @include mq($from: desktop) {
+    font-size: 2.25vw;
+  }
 }
 
 .welcome__footer-subtitle {
@@ -183,6 +187,10 @@
   font-size: 2.25vw;
   text-align: center;
   color: hsl(0, 0%, 64%);
+
+  @include mq($from: desktop) {
+    font-size: 2vw;
+  }
 }
 
 .welcome__footer-button {
