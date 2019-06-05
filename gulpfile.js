@@ -1,7 +1,7 @@
 const { src, dest, series, parallel, watch } = require("gulp");
 
 // markup
-const nunjucks = require("gulp-nunjucks");
+const nunjucks = require("gulp-nunjucks-render");
 const htmlmin = require("gulp-htmlmin");
 
 // stylesheets
@@ -11,7 +11,7 @@ const postcss = require("gulp-postcss");
 
 // utils
 const gulpIf = require("gulp-if");
-const { join } = require("path");
+const path = require("path");
 const flatten = require("gulp-flatten");
 const rimraf = require("rimraf");
 const browserSync = require("browser-sync").create();
@@ -20,12 +20,14 @@ const [DEV, PROD] = ["development", "production"];
 const { NODE_ENV = DEV } = process.env;
 const [IS_DEV, IS_PROD] = [NODE_ENV === DEV, NODE_ENV === PROD];
 
+const { join } = path.posix;
+
 const SRC = "src";
 const DIST = "dist";
 
 function processMarkup() {
   return src(join(SRC, "*.html"))
-    .pipe(nunjucks.compile())
+    .pipe(nunjucks())
     .pipe(gulpIf(IS_PROD, htmlmin({ collapseWhitespace: true })))
     .pipe(flatten())
     .pipe(dest(DIST))
