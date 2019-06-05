@@ -60,6 +60,12 @@
   padding: 10px 20px;
   padding-bottom: 5px;
   text-align: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: hsl(261, 50%, 70%);
+    cursor: pointer;
+  }
 
   &.active {
     color: hsl(268, 100%, 60%);

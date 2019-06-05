@@ -69,4 +69,8 @@
   right: 0;
   box-shadow: -1px 0 5px rgba(#000, 0.1);
   background: linear-gradient(to right, #31c888, #39d7a1);
+
+  &:hover {
+    cursor: pointer;
+  }
 }
