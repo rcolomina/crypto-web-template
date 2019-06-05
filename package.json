@@ -1,4 +1,5 @@
 {
+  "name": "nrzull-crypto-web-template",
   "scripts": {
     "gulp:dev": "gulp",
     "gulp:prod": "gulp",
