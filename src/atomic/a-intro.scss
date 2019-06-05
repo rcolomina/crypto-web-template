@@ -1,4 +1,20 @@
-#intro__video {
+.intro {
+  height: 35vw;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("assets/images/intro-bg.jpg");
   position: relative;
-  max-height: 35vw;
+}
+
+.intro__play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#intro__video {
+  display: none;
+  height: 35vw;
+  position: relative;
 }
