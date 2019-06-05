@@ -2,4 +2,4 @@ import "core-js";
 
 // Atoms
 import "@/atomic/a-nav-menu";
-import "@/atomic/a-intro-screen";
+import "@/atomic/a-intro";

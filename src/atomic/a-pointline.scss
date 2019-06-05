@@ -1,11 +1,11 @@
-.pointline-screen {
+.pointline {
   padding: 5vw;
   background-image: url("assets/images/features-bg.jpg");
   background-size: cover;
   background-position: center center;
 }
 
-.pointline-screen__line {
+.pointline__line {
   position: relative;
   width: 11px;
   height: 700px;
@@ -20,7 +20,7 @@
 
 $circle-size: 22;
 
-%pointline-screen__line-circle {
+%pointline__line-circle {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -31,19 +31,19 @@ $circle-size: 22;
   z-index: 2;
 }
 
-.pointline-screen__line-circle {
-  @extend %pointline-screen__line-circle;
+.pointline__line-circle {
+  @extend %pointline__line-circle;
 }
 
-.pointline-screen__line-circle_first {
+.pointline__line-circle_first {
   top: 0;
 }
 
-.pointline-screen__line-circle_last {
+.pointline__line-circle_last {
   bottom: (-$circle-size * 1px);
 }
 
-.pointline-screen__line-circle-border {
+.pointline__line-circle-border {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -55,13 +55,13 @@ $circle-size: 22;
   top: 50%;
 }
 
-@mixin pointline-screen__line-point-position($top-offset) {
+@mixin pointline__line-point-position($top-offset) {
   left: 50%;
   top: $top-offset;
   transform: translate(-50%, -$top-offset);
 }
 
-.pointline-screen__line-point {
+.pointline__line-point {
   position: absolute;
   width: 80px;
   height: 80px;
@@ -91,23 +91,23 @@ $circle-size: 22;
   }
 }
 
-.pointline-screen__line-point_first {
-  @include pointline-screen__line-point-position(10%);
+.pointline__line-point_first {
+  @include pointline__line-point-position(10%);
 }
 
-.pointline-screen__line-point_second {
-  @include pointline-screen__line-point-position(36%);
+.pointline__line-point_second {
+  @include pointline__line-point-position(36%);
 }
 
-.pointline-screen__line-point_third {
-  @include pointline-screen__line-point-position(64%);
+.pointline__line-point_third {
+  @include pointline__line-point-position(64%);
 }
 
-.pointline-screen__line-point_fourth {
-  @include pointline-screen__line-point-position(90%);
+.pointline__line-point_fourth {
+  @include pointline__line-point-position(90%);
 }
 
-.pointline-screen__line-point-number {
+.pointline__line-point-number {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -135,7 +135,7 @@ $circle-size: 22;
   }
 }
 
-.pointline-screen__line-point-title {
+.pointline__line-point-title {
   position: absolute;
   width: 500%;
   top: 50%;
@@ -156,7 +156,7 @@ $circle-size: 22;
     top: -25%;
   }
 
-  .pointline-screen__line-point_first & {
+  .pointline__line-point_first & {
     @include mq($from: desktop) {
       @include right-side;
     }
@@ -166,11 +166,11 @@ $circle-size: 22;
     }
   }
 
-  .pointline-screen__line-point_second & {
+  .pointline__line-point_second & {
     @include left-side;
   }
 
-  .pointline-screen__line-point_third & {
+  .pointline__line-point_third & {
     @include mq($from: desktop) {
       @include right-side;
     }
@@ -180,12 +180,12 @@ $circle-size: 22;
     }
   }
 
-  .pointline-screen__line-point_fourth & {
+  .pointline__line-point_fourth & {
     @include left-side;
   }
 }
 
-.pointline-screen__line-point-description {
+.pointline__line-point-description {
   position: absolute;
   width: 500%;
   top: 50%;
@@ -199,11 +199,11 @@ $circle-size: 22;
     font-weight: 400;
   }
 
-  .pointline-screen__line-point_first & {
+  .pointline__line-point_first & {
     @include left-side;
   }
 
-  .pointline-screen__line-point_second & {
+  .pointline__line-point_second & {
     @include mq($from: desktop) {
       @include right-side;
     }
@@ -213,11 +213,11 @@ $circle-size: 22;
     }
   }
 
-  .pointline-screen__line-point_third & {
+  .pointline__line-point_third & {
     @include left-side;
   }
 
-  .pointline-screen__line-point_fourth & {
+  .pointline__line-point_fourth & {
     @include mq($from: desktop) {
       @include right-side;
     }

@@ -8,7 +8,7 @@
   }
 }
 
-.stay-tuned-screen {
+.stay-tuned {
   padding: 5vw;
   background-image: url("assets/images/stay-tuned-bg.jpg");
   background-size: cover;
@@ -16,13 +16,13 @@
   background-position: center center;
 }
 
-.stay-tuned-screen__header {
+.stay-tuned__header {
   @extend %screen-header;
   margin-bottom: 5px;
   color: #fff;
 }
 
-.stay-tuned-screen__subheader {
+.stay-tuned__subheader {
   text-align: center;
   color: #fff;
   font-weight: 300;
@@ -37,7 +37,7 @@
   }
 }
 
-.stay-tuned-screen__form {
+.stay-tuned__form {
   margin: 0 auto;
   margin-top: 30px;
   display: flex;
@@ -48,19 +48,19 @@
   }
 }
 
-.stay-tuned-screen__input-wrapper {
+.stay-tuned__input-wrapper {
   position: relative;
 }
 
-.stay-tuned-screen__input {
+.stay-tuned__input {
   @extend %part-of-input;
 }
 
-.stay-tuned-screen__input:placeholder-shown {
+.stay-tuned__input:placeholder-shown {
   color: #c3c2c2;
 }
 
-.stay-tuned-screen__button {
+.stay-tuned__button {
   @extend %part-of-input;
   text-transform: uppercase;
   color: #fff;

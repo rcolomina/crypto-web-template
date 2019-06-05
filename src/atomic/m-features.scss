@@ -1,13 +1,13 @@
-.features-screen {
+.features {
   padding: 5vw;
   background-color: #fff;
 }
 
-.features-screen__header {
+.features__header {
   @extend %screen-header;
 }
 
-.features-screen__block {
+.features__block {
   vertical-align: top;
   display: inline-block;
   width: 100%;
@@ -24,7 +24,7 @@
   }
 }
 
-.features-screen__block-title {
+.features__block-title {
   color: #5a5a5a;
   margin-bottom: 2vw;
   font-size: 18px;
@@ -36,7 +36,7 @@
   }
 }
 
-.features-screen__block-text {
+.features__block-text {
   font-weight: 400;
   font-size: 16px;
   color: #7f7e7f;
@@ -47,7 +47,7 @@
   }
 }
 
-.features-screen__block-image {
+.features__block-image {
   text-align: center;
   display: block;
   margin: 0 auto;

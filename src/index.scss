@@ -16,17 +16,17 @@
 @import "atomic/a-screen-header";
 @import "atomic/a-logo";
 @import "atomic/a-nav-menu";
-@import "atomic/a-intro-screen";
-@import "atomic/a-brands-screen";
-@import "atomic/a-pointline-screen";
-@import "atomic/a-footer-screen";
+@import "atomic/a-intro";
+@import "atomic/a-brands";
+@import "atomic/a-pointline";
+@import "atomic/a-footer";
 
 // Molecules
 @import "atomic/m-top-bar";
-@import "atomic/m-explain-screen";
-@import "atomic/m-features-screen";
-@import "atomic/m-stay-tuned-screen";
-@import "atomic/m-our-team-screen";
+@import "atomic/m-explain";
+@import "atomic/m-features";
+@import "atomic/m-stay-tuned";
+@import "atomic/m-our-team";
 
 // Organisms
-@import "atomic/o-welcome-screen";
+@import "atomic/o-welcome";

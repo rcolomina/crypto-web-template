@@ -1,13 +1,13 @@
-.explain-screen {
+.explain {
   padding: 5vw;
   background-color: #fff;
 }
 
-.explain-screen__header {
+.explain__header {
   @extend %screen-header;
 }
 
-.explain-screen__blocks {
+.explain__blocks {
   display: flex;
   flex-flow: column;
 
@@ -16,7 +16,7 @@
   }
 }
 
-.explain-screen__block {
+.explain__block {
   font-weight: 400;
   margin-bottom: 35px;
 
@@ -40,7 +40,7 @@
   }
 }
 
-.explain-screen__block-title {
+.explain__block-title {
   font-size: 18px;
   margin-bottom: 5px;
   text-transform: uppercase;
@@ -52,7 +52,7 @@
   }
 }
 
-.explain-screen__block-text {
+.explain__block-text {
   color: #9f9f9f;
 
   @include mq($from: desktop) {

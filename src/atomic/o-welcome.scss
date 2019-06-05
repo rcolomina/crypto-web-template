@@ -1,4 +1,4 @@
-.welcome-screen {
+.welcome {
   position: relative;
   overflow-x: hidden;
 
@@ -10,17 +10,17 @@
   }
 }
 
-.welcome-screen__background {
+.welcome__background {
   width: 100%;
   display: block;
 }
 
-.welcome-screen__background-bottom {
+.welcome__background-bottom {
   height: 22.5vw;
   background-color: hsl(0, 0, 100);
 }
 
-.welcome-screen__main {
+.welcome__main {
   position: absolute;
   top: 19vw;
   left: 0;
@@ -36,7 +36,7 @@
   }
 }
 
-.welcome-screen__proposal-one {
+.welcome__proposal-one {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,34 +49,34 @@
   }
 }
 
-.welcome-screen__proposal-one-image {
+.welcome__proposal-one-image {
   width: 4vw;
 }
 
-.welcome-screen__proposal-one-text {
+.welcome__proposal-one-text {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 3vw;
 }
 
-.welcome-screen__proposal-one-subtext {
+.welcome__proposal-one-subtext {
   font-weight: 300;
   font-size: 2.75vw;
 }
 
-.welcome-screen__proposal-two {
+.welcome__proposal-two {
   margin-top: 3vw;
   font-size: 2.8vw;
 }
 
-.welcome-screen__proposal-three {
+.welcome__proposal-three {
   margin-top: 1vw;
   font-size: 2.4vw;
   width: 50%;
   text-align: center;
 }
 
-.welcome-screen__transfer {
+.welcome__transfer {
   position: absolute;
   bottom: 32.5vw;
   left: 10%;
@@ -95,11 +95,11 @@
   }
 }
 
-.welcome-screen__transfer-image {
+.welcome__transfer-image {
   width: 25vw;
 }
 
-.welcome-screen__transfer-button {
+.welcome__transfer-button {
   padding: 1.25vw 1.5vw;
   border-radius: 100vw;
   background-color: transparent;
@@ -130,7 +130,7 @@
   }
 }
 
-.welcome-screen__footer {
+.welcome__footer {
   position: absolute;
   bottom: 5vw;
   left: 0;
@@ -141,14 +141,14 @@
   justify-content: center;
 }
 
-.welcome-screen__footer-title {
+.welcome__footer-title {
   text-align: center;
   font-size: 2.5vw;
   padding: 0 25%;
   color: hsl(0, 0%, 31%);
 }
 
-.welcome-screen__footer-subtitle {
+.welcome__footer-subtitle {
   padding: 0 10%;
   padding-top: 2.5vw;
   font-size: 2.25vw;
@@ -156,7 +156,7 @@
   color: hsl(0, 0%, 64%);
 }
 
-.welcome-screen__footer-button {
+.welcome__footer-button {
   margin-top: 5vw;
   padding: 1.6vw 5vw;
   border-radius: 100vw;
