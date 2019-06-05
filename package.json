@@ -1,5 +1,11 @@
 {
   "name": "nrzull-crypto-web-template",
+  "description": "Web Template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nrzull/crypto-web-template"
+  },
+  "license": "MIT",
   "scripts": {
     "gulp:dev": "gulp",
     "gulp:prod": "gulp",
